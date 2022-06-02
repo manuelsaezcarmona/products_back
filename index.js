@@ -23,6 +23,8 @@ app.use(express.static('public'));
 
 /* --- ROUTES ---- */
 
+// app.use('/api/product')
+
 app.get('/products', (req, res) => {
   console.log(products);
   res.json(products);
