@@ -22,11 +22,27 @@ const addProduct = async (req, res) => {
       newProduct,
     });
   } catch (error) {
-    res.status(500).json({
+    return res.status(500).json({
       ok: false,
       msg: `Please contact the administrator ${error.message}`,
     });
   }
 };
 
-module.exports = { addProduct };
+const getAllProducts = async (req, res) => {
+  try {
+    const products = await Product.find();
+
+    return res.status(201).json({
+      ok: true,
+      products,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      ok: false,
+      msg: `Please contact the administrator ${error.message}`,
+    });
+  }
+};
+
+module.exports = { addProduct, getAllProducts };

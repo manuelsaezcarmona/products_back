@@ -20,3 +20,7 @@ Suelo crear una pequeña pagina para indicar desde front que el servidor está f
 #### - DB-endpoints
 
 EN esta rama se crean las rutas y los controladores del backend
+
+###### Consideraciones.
+
+No he cread
