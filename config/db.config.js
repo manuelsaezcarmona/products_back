@@ -29,7 +29,7 @@ const dbConexion = async () => {
     console.log(`DB Conectada a ${databaseName}`);
     return conexionMongoose;
   } catch (error) {
-    console.log(error.message);
+    console.log(`estoy en el error ${error.message}`);
     return error.message;
   }
 };
