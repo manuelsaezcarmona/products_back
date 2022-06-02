@@ -1,7 +1,7 @@
 const { Schema, model } = require('mongoose');
 
 const ProductSchema = Schema({
-  name: {
+  productName: {
     type: String,
     required: true,
   },
@@ -15,6 +15,10 @@ const ProductSchema = Schema({
   },
   isFavourite: {
     type: Boolean,
+    required: true,
+  },
+  price: {
+    type: Number,
     required: true,
   },
   section: {
