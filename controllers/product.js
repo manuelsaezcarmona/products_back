@@ -47,7 +47,7 @@ const getAllProducts = async (req, res) => {
   }
 };
 
-const searchProducts = async (req, res) => {
+const getProductsByTerm = async (req, res) => {
   const { term } = req.query;
 
   const reg = new RegExp(term, 'i');
@@ -69,4 +69,4 @@ const searchProducts = async (req, res) => {
   }
 };
 
-module.exports = { addProduct, getAllProducts, searchProducts };
+module.exports = { addProduct, getAllProducts, getProductsByTerm };

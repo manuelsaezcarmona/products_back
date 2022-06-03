@@ -3,11 +3,11 @@ const productRouter = require('express').Router();
 const {
   addProduct,
   getAllProducts,
-  searchProducts,
+  getProductsByTerm,
 } = require('../controllers/product');
 
 productRouter.post('/', addProduct);
 productRouter.get('/', getAllProducts);
-productRouter.get('/search', searchProducts);
+productRouter.get('/search', getProductsByTerm);
 
 module.exports = productRouter;
