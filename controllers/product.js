@@ -30,6 +30,8 @@ const addProduct = async (req, res) => {
 };
 
 const getAllProducts = async (req, res) => {
+  console.log(req.body);
+
   try {
     const products = await Product.find();
 
@@ -45,4 +47,26 @@ const getAllProducts = async (req, res) => {
   }
 };
 
-module.exports = { addProduct, getAllProducts };
+const searchProducts = async (req, res) => {
+  const { term } = req.query;
+
+  const reg = new RegExp(term, 'i');
+
+  try {
+    const result = await Product.find({
+      productName: reg,
+    });
+
+    return res.status(201).json({
+      ok: true,
+      result,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      ok: false,
+      msg: `Please contact the administrator ${error.message}`,
+    });
+  }
+};
+
+module.exports = { addProduct, getAllProducts, searchProducts };
