@@ -30,8 +30,6 @@ const addProduct = async (req, res) => {
 };
 
 const getAllProducts = async (req, res) => {
-  console.log(req.body);
-
   try {
     const products = await Product.find();
 
