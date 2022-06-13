@@ -31,7 +31,7 @@ DB_PASS=productos
 DB_CLUSTER=@manucluster0.xmenl.mongodb.net
 DB_NAME_DEV=productsDev
 DB_NAME_TEST=productsTest
-DB_NAME_PROD=products
+DB_NAME_PROD=productsDev
 ```
 
 Ahora ya puedes lanzar el proyecto con ...
